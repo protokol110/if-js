@@ -31,3 +31,46 @@ for (let i = 0; i < ccc.length; i += 1) {
     console.log(ccc[i]);// 2 8 0 6 20
   }
 }
+// new homework
+const isPalindrome = (str) => {
+  const strLen = str.length;
+  if (strLen < 2) return true;
+
+  if (str[0] === str[strLen - 1]) {
+    return isPalindrome(str.slice(1, strLen - 1));
+  }
+
+  return false;
+};
+
+console.log(isPalindrome('madam'));
+
+function minn(a, b) {
+  return a < b ? a : b;
+}
+minn(9, 20);
+
+function maxx(a, y) {
+  return a > y ? a : y;
+}
+maxx(2, 5);
+console.log('max', maxx(2, 5)); // 5
+console.log('min', minn(9, 20)); // 9
+
+function randArr(count, min, max) {
+  const arr = [];
+  while (arr.length !== count) {
+    const rand = Math.floor(Math.random() * (max + 1 - min) + min);
+    if (arr.indexOf(rand) === -1) arr.push(rand);
+  }
+  return arr;
+}
+function replaceZero(number) {
+  const numStr = `${number}`;
+  if (numStr.includes('0')) {
+    return `${number}`.replaceAll('0', 'zero');
+  }
+  return number;
+}
+randArr(10, 1, 100);
+console.log(randArr(10, 1, 100).map(replaceZero).join(', '));
