@@ -86,11 +86,10 @@ function sum(a) {
   };
   return res;
 }
-/* console.log(sum(5)(2)); */
-
-test('qwerty', () => {
+console.log(sum(5)(2));
+/* test('qwerty', () => {
   expect(sum(5)(2)).toBe(7);
-});
+}); */
 // 6
 const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
 const pcollect = document.getElementsByTagName('p');
@@ -108,6 +107,103 @@ for (let i = 0; i < pcollect.length; i += 1) {
   pcollect[i].addEventListener('click', f1());
 }
 
-test('color', () => {
-  expect(f1()).toBe(colors);
+// lesson-5
+const date = {
+  year: 'numeric',
+  month: 'numeric',
+  day: 'numeric',
+  timeZone: 'UTC',
+};
+console.log(new Date().toLocaleString('ru', date));
+// 6
+const newData = [];
+const data = [
+  {
+    country: 'Russia',
+    city: 'Saint Petersburg',
+    hotel: 'Hotel Leopold',
+  },
+  {
+    country: 'Spain',
+    city: 'Santa Cruz de Tenerife',
+    hotel: 'Apartment Sunshine',
+  },
+  {
+    country: 'Slowakia',
+    city: 'Vysokie Tatry',
+    hotel: 'Villa Kunerad',
+  },
+  {
+    country: 'Germany',
+    city: 'Berlin',
+    hotel: 'Hostel Friendship',
+  },
+  {
+    country: 'Indonesia',
+    city: 'Bali',
+    hotel: 'Ubud Bali Resort&SPA',
+  },
+  {
+    country: 'Netherlands',
+    city: 'Rotterdam',
+    hotel: 'King Kong Hostel',
+  },
+  {
+    country: 'Marocco',
+    city: 'Ourika',
+    hotel: 'Rokoko Hotel',
+  },
+  {
+    country: 'Germany',
+    city: 'Berlin',
+    hotel: 'Hotel Rehberge Berlin Mitte',
+  },
+];
+data.forEach((element) => {
+  newData.push(element.country, element.city, element.hotel);
 });
+console.log(newData);
+console.log(newData.filter((el) => el === 'Berlin'));
+console.log(newData.filter((el) => el === 'Germany'));
+const mass = [{ country: 'Russia' },
+  { country: 'Ukraine' },
+  { country: 'Kazakhastan' },
+  { country: 'Spain' },
+  { country: 'Slowakia' },
+  { country: 'Indonesia' },
+  { country: 'Netherlands' },
+  { country: 'Marocco' },
+  { country: 'Germany' },
+];
+const str = JSON.stringify(mass);
+const str1 = str.replace(/country/g, '');
+const re = /\B\w{4}\B/g;
+console.log(str1.match(re));
+const qwe = [
+  { city: 'Saint Petersburg' },
+  { city: 'Vysokie Tatry' },
+  { city: 'Santa Cruz de Tenerife' },
+  { city: 'Berlin' },
+  { city: 'Bali' },
+  { city: 'Rotterdam ' },
+  { city: 'Ourika' },
+  { city: 'Berlin' },
+];
+const asd = JSON.stringify(qwe);
+const zxc = asd.replace(/country/g, '');
+const te = /\B\w{5}\B/g;
+console.log(zxc.match(te));
+const vbn = [
+  { hotel: 'Hotel Leopold' },
+  { hotel: 'Apartment Sunshine' },
+  { hotel: 'Villa Kunerad' },
+  { hotel: 'Hostel Friendship' },
+  { hotel: 'Ubud Bali Resort&SPA' },
+  { hotel: 'King Kong Hostel' },
+  { hotel: 'Rokoko Hotel' },
+  { hotel: 'Hotel Rehberge Berlin Mitte' },
+];
+const qaz = JSON.stringify(vbn);
+const wsx = qaz.replace(/country/g, '');
+const de = /\b\w{4}\B/g;
+console.log(wsx.match(de));
