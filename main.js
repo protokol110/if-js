@@ -74,3 +74,36 @@ function replaceZero(number) {
 }
 randArr(10, 1, 100);
 console.log(randArr(10, 1, 100).map(replaceZero).join(', '));
+// new homework lesson-4
+function sum(a) {
+  return function (b) {
+    return a + b;
+  };
+}
+console.log(sum(5)(2));
+
+/* test('qwerty', () => {
+  expect(sum(5)(2)).toBe(7);
+}); */
+// 6
+const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+const pcollect = document.getElementsByTagName('p');
+
+const f1 = function () {
+  let k = 0;
+  return function () {
+    this.style.color = colors[k];
+    k += 1;
+    if (k === colors.length) { k = 0; }
+  };
+};
+
+for (let i = 0; i < pcollect.length; i += 1) {
+  pcollect[i].addEventListener('click', f1());
+}
+
+/*
+test('color', () => {
+  expect(f1()).toBe(colors);
+});
+*/
