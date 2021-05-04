@@ -485,4 +485,3 @@ function objectsAreEqual(a, b) {
 }
 console.log(objectsAreEqual(obj3, obj12));
 console.log(objectsAreEqual(obj12, obj22));
-
