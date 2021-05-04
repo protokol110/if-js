@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
 </head>
 <body>
 <p id="text1">Text 1</p>
 <p id="text2">Text 2</p>
 <p id="text3">Text 3</p>
+<input type="date" name="date-times" />
+
+<script>
+    $(function() {
+        $('input[name="date-times"]').daterangepicker({
+            timePicker: true,
+            startDate: moment().startOf('hour'),
+            endDate: moment().startOf('hour').add(32, 'hour'),
+            locale: {
+                format: 'M/DD hh:mm A'
+            }
+        });
+    });
+</script>
 <script src="main.js"></script>
 <script src="main.test.js"></script>
 </body>
