@@ -1,4 +1,4 @@
-let user = 'John Doe';
+/* let user = 'John Doe';
 console.log(user);
 const student = 'Aleksei';
 console.log(student);
@@ -87,9 +87,9 @@ function sum(a) {
   return res;
 }
 console.log(sum(5)(2));
-/* test('qwerty', () => {
+/!* test('qwerty', () => {
   expect(sum(5)(2)).toBe(7);
-}); */
+}); *!/
 // 6
 const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
 const pcollect = document.getElementsByTagName('p');
@@ -115,7 +115,7 @@ const date = {
   timeZone: 'UTC',
 };
 console.log(new Date().toLocaleString('ru', date));
-/* // 6
+/!* // 6
 const newData = [];
 const data = [
   {
@@ -207,7 +207,7 @@ const qaz = JSON.stringify(vbn);
 const wsx = qaz.replace(/country/g, '');
 const de = /\b\w{4}\B/g;
 console.log(wsx.match(de));
-/* 6 lesson */
+ 6 lesson
 function palindrome(s) {
   return s === s.split('').reverse().join('');
 }
@@ -484,4 +484,89 @@ function objectsAreEqual(a, b) {
   return true;
 }
 console.log(objectsAreEqual(obj3, obj12));
-console.log(objectsAreEqual(obj12, obj22));
+console.log(objectsAreEqual(obj12, obj22)); */
+// lesson-8
+const dateCurrentYear = new Date().getFullYear();
+const studentsData = [
+  {
+    firstName: 'Василий',
+    lastName: 'Петров',
+    admissionYear: 2019,
+    courseName: 'Java',
+  },
+  {
+    firstName: 'Иван',
+    lastName: 'Иванов',
+    admissionYear: 2018,
+    courseName: 'JavaScript',
+  },
+  {
+    firstName: 'Александр',
+    lastName: 'Федоров',
+    admissionYear: 2017,
+    courseName: 'Python',
+  },
+  {
+    firstName: 'Николай',
+    lastName: 'Петров',
+    admissionYear: 2019,
+    courseName: 'Android',
+  },
+];
+class User {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+class Student extends User {
+  constructor(admissionYear, courseName, firstName, lastname) {
+    super(firstName, lastname);
+    this.admissionYear = admissionYear;
+    this.courseName = courseName;
+  }
+
+  get course() {
+    return dateCurrentYear - this.admissionYear;
+  }
+}
+class Student1 {
+  constructor(firstName, lastName, admissionYear, courseName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.admissionYear = admissionYear;
+    this.courseName = courseName;
+  }
+
+  get fullName1() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  get course() {
+    return dateCurrentYear - this.admissionYear;
+  }
+}
+const data2 = studentsData.map((e) => new Student1(...Object.values(e)));
+class Students {
+  constructor(students) {
+    this.students = students;
+  }
+
+  getInfo() {
+    const sorted = this.students.sort((a, b) => a.course - b.course);
+    return sorted.map((a) => `${a.fullName1} - ${a.courseName}, ${a.course} курс`);
+  }
+}
+// eslint-disable-next-line no-unused-vars
+const students1 = new Students(data2);
+const exercise = new User('Aleksey', ' Siniakevich');
+const courseExercise = new Student(2020, 'Java');
+console.log(exercise);
+console.log(exercise.fullName);
+console.log(courseExercise.course);
+console.log(students1.getInfo());
