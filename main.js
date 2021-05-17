@@ -175,10 +175,10 @@ const mass = [{ country: 'Russia' },
   { country: 'Marocco' },
   { country: 'Germany' },
 ];
-const str = JSON.stringify(mass);
-const str1 = str.replace(/country/g, '');
+const sorting = JSON.stringify(mass);
+const output = sorting.replace(/country/g, '');
 const searchData1 = /\B\w{4}\B/g;
-console.log(str1.match(searchData1));
+console.log(output.match(searchData1));
 const mass2 = [
   { city: 'Saint Petersburg' },
   { city: 'Vysokie Tatry' },
