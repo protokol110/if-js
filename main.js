@@ -588,5 +588,6 @@ const colors = {
   },
 };
 for (const color of colors) {
-  document.getElementById(`text${color.index}`).style.color = color.color;
+  const textEl = document.getElementById(`text${color.index}`);
+  textEl.style.color = color.color;
 }
