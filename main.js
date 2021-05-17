@@ -177,8 +177,8 @@ const mass = [{ country: 'Russia' },
 ];
 const str = JSON.stringify(mass);
 const str1 = str.replace(/country/g, '');
-const re = /\B\w{4}\B/g;
-console.log(str1.match(re));
+const searchData1 = /\B\w{4}\B/g;
+console.log(str1.match(searchData1));
 const mass2 = [
   { city: 'Saint Petersburg' },
   { city: 'Vysokie Tatry' },
@@ -191,8 +191,8 @@ const mass2 = [
 ];
 const sorting1 = JSON.stringify(mass2);
 const output1 = sorting1.replace(/country/g, '');
-const te = /\B\w{5}\B/g;
-console.log(output1.match(te));
+const searchData2 = /\B\w{5}\B/g;
+console.log(output1.match(searchData2));
 const mass3 = [
   { hotel: 'Hotel Leopold' },
   { hotel: 'Apartment Sunshine' },
@@ -205,5 +205,5 @@ const mass3 = [
 ];
 const sorting2 = JSON.stringify(mass3);
 const wsx = sorting2.replace(/country/g, '');
-const de = /\b\w{4}\B/g;
-console.log(wsx.match(de));
+const searchData3 = /\b\w{4}\B/g;
+console.log(wsx.match(searchData3));
