@@ -486,7 +486,7 @@ function objectsAreEqual(a, b) {
 console.log(objectsAreEqual(obj3, obj12));
 console.log(objectsAreEqual(obj12, obj22)); */
 // lesson-8
-const dateCurrentYear = new Date().getFullYear();
+/* const dateCurrentYear = new Date().getFullYear();
 const studentsData = [
   {
     firstName: 'Василий',
@@ -588,5 +588,72 @@ const colors = {
   },
 };
 for (const color of colors) {
-  document.getElementById(`text${color.index}`).style.color = color.color;
-}
+  const textEl = document.getElementById(`text${color.index}`);
+  textEl.style.color = color.color;
+} */
+// lesson-10
+const data = [
+  {
+    name: 'Hotel Leopold',
+    city: 'Saint Petersburg',
+    country: 'Russia',
+    imageUrl: 'https://res.cloudinary.com/intellectfox/image/upload/v1610379365/fe/hotel-leopold_mflelk.jpg',
+  },
+  {
+    name: 'Apartment Sunshine',
+    city: 'Santa  Cruz de Tenerife',
+    country: 'Spain',
+    imageUrl: 'https://res.cloudinary.com/intellectfox/image/upload/v1610379364/fe/apartment-sunshine_vhdlel.jpg',
+  },
+  {
+    name: 'Villa Kunerad',
+    city: 'Vysokie Tatry',
+    country: 'Slowakia',
+    imageUrl: 'https://res.cloudinary.com/intellectfox/image/upload/v1610379365/fe/villa-kunerad_gdbqgv.jpg',
+  },
+  {
+    name: 'Hostel Friendship',
+    city: 'Berlin',
+    country: 'Germany',
+    imageUrl: 'https://res.cloudinary.com/intellectfox/image/upload/v1610379364/fe/hostel-friendship_aw6tn7.jpg',
+  },
+  {
+    name: 'Radisson Blu Hotel',
+    city: 'Kyiv',
+    country: 'Ukraine',
+    imageUrl: 'https://res.cloudinary.com/intellectfox/image/upload/v1610379365/fe/radisson-blu-hotel_jwtowg.jpg',
+  },
+  {
+    name: 'Paradise Hotel',
+    city: 'Guadalupe',
+    country: 'Mexico',
+    imageUrl: 'https://res.cloudinary.com/intellectfox/image/upload/v1610379365/fe/paradise-hotel_i6whae.jpg',
+  },
+  {
+    name: 'Hotel Grindewald',
+    city: 'Interlaken',
+    country: 'Switzerland',
+    imageUrl: 'https://res.cloudinary.com/intellectfox/image/upload/v1610379365/fe/hotel-grindewald_zsjsmy.jpg',
+  },
+  {
+    name: 'The Andaman Resort',
+    city: 'Port Dickson',
+    country: 'Malaysia',
+    imageUrl: 'https://res.cloudinary.com/intellectfox/image/upload/v1610379365/fe/the-andaman-resort_d2xksj.jpg',
+  },
+];
+const divElementMain = document.createElement('div');
+const divElement = document.createElement('div');
+const divImage = document.createElement('div');
+const newCapitalText = document.createTextNode('Homes guests love');
+const newTextImgnewTextImg = document.createTextNode('Hotel Leopold');
+const spanElement = document.createElement('span');
+const spanElementImg = document.createElement('span');
+const imgImage = document.createElement('img');
+document.body.appendChild(divElementMain);
+spanElement.appendChild(newCapitalText);
+divElement.appendChild(spanElement);
+divElementMain.appendChild(divElement).appendChild(divImage);
+divImage.appendChild(imgImage).appendChild(spanElementImg.appendChild(newTextImgnewTextImg));
+imgImage.setAttribute('src', 'ttps://res.cloudinary.com/intellectfox/image/upload/v1610379365/fe/hotel-leopold_mflelk.jpg');
+imgImage.setAttribute('alt', 'Hotel Leopold');
