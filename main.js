@@ -204,6 +204,6 @@ const mass3 = [
   { hotel: 'Hotel Rehberge Berlin Mitte' },
 ];
 const sorting2 = JSON.stringify(mass3);
-const wsx = sorting2.replace(/country/g, '');
+const output2 = sorting2.replace(/country/g, '');
 const searchData3 = /\b\w{4}\B/g;
-console.log(wsx.match(searchData3));
+console.log(output2.match(searchData3));
