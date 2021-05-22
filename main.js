@@ -1,4 +1,4 @@
-let user = 'John Doe';
+/* let user = 'John Doe';
 console.log(user);
 const student = 'Aleksei';
 console.log(student);
@@ -87,9 +87,9 @@ function sum(a) {
   return res;
 }
 console.log(sum(5)(2));
-/* test('qwerty', () => {
+/!* test('qwerty', () => {
   expect(sum(5)(2)).toBe(7);
-}); */
+}); *!/
 // 6
 const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
 const pcollect = document.getElementsByTagName('p');
@@ -114,7 +114,7 @@ const date = {
   day: 'numeric',
   timeZone: 'UTC',
 };
-console.log(new Date().toLocaleString('ru', date));
+console.log(new Date().toLocaleString('ru', date)); */
 /* // 6
 const newData = [];
 const data = [
@@ -255,11 +255,11 @@ const data = [
     hotel: 'Hotel Rehberge Berlin Mitte',
   },
 ];
-const search = (strz) => {
+const search = (str) => {
   const newData1 = [];
   data.forEach((lx, i) => {
     const obj = data[i];
-    if (obj.country.includes(strz) || obj.city.includes(strz) || obj.hotel.includes(strz)) {
+    if (obj.country.includes(str) || obj.city.includes(str) || obj.hotel.includes(str)) {
       newData1[newData1.length] = `${obj.country} ${obj.city} ${obj.hotel}`;
     }
   });
