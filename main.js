@@ -76,22 +76,17 @@ randArr(10, 1, 100);
 console.log(randArr(10, 1, 100).map(replaceZero).join(', '));
 // new homework lesson-4
 function sum(a) {
-  let isSum = a;
-  function res(b) {
-    isSum += b;
-    return res;
-  }
-  res.toString = function () {
-    return isSum;
+  return function (b) {
+    return a + b;
   };
-  return res;
 }
 console.log(sum(5)(2));
-/!* test('qwerty', () => {
+
+/* test('qwerty', () => {
   expect(sum(5)(2)).toBe(7);
-}); *!/
+}); */
 // 6
-const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+/* const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
 const pcollect = document.getElementsByTagName('p');
 
 const f1 = function () {
