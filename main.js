@@ -76,20 +76,18 @@ randArr(10, 1, 100);
 console.log(randArr(10, 1, 100).map(replaceZero).join(', '));
 // new homework lesson-4
 function sum(a) {
-  let isSum = a;
-  function res(b) {
-    isSum += b;
-    return res;
-  }
-  res.toString = function () {
-    return isSum;
+  return function (b) {
+    return a + b;
   };
-  return res;
 }
 console.log(sum(5)(2));
 /!* test('qwerty', () => {
+console.log(sum(5)(2));
+
+/* test('qwerty', () => {
   expect(sum(5)(2)).toBe(7);
 }); *!/
+}); */
 // 6
 const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
 const pcollect = document.getElementsByTagName('p');
@@ -115,7 +113,7 @@ const date = {
   timeZone: 'UTC',
 };
 console.log(new Date().toLocaleString('ru', date));
-/!* // 6
+/* // 6
 const newData = [];
 const data = [
   {
@@ -161,7 +159,12 @@ const data = [
 ];
 data.forEach((element) => {
   newData.push(element.country, element.city, element.hotel);
+/*
+test('color', () => {
+  expect(f1()).toBe(colors);
 });
+*/
+/*
 console.log(newData);
 console.log(newData.filter((el) => el === 'Berlin'));
 console.log(newData.filter((el) => el === 'Germany'));
