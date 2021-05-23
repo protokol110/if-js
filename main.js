@@ -1,3 +1,4 @@
+/*
 let user = 'John Doe';
 console.log(user);
 const student = 'Aleksei';
@@ -87,9 +88,9 @@ function sum(a) {
   return res;
 }
 console.log(sum(5)(2));
-/* test('qwerty', () => {
+/!* test('qwerty', () => {
   expect(sum(5)(2)).toBe(7);
-}); */
+}); *!/
 // 6
 const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
 const pcollect = document.getElementsByTagName('p');
@@ -106,6 +107,7 @@ const f1 = function () {
 for (let i = 0; i < pcollect.length; i += 1) {
   pcollect[i].addEventListener('click', f1());
 }
+*/
 
 // lesson-5
 const date = {
