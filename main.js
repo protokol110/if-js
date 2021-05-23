@@ -86,10 +86,11 @@ function sum(a) {
   };
   return res;
 }
-console.log(sum(5)(2));
-/!* test('qwerty', () => {
+/* console.log(sum(5)(2)); */
+
+test('qwerty', () => {
   expect(sum(5)(2)).toBe(7);
-}); *!/
+});
 // 6
 const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
 const pcollect = document.getElementsByTagName('p');
@@ -107,7 +108,7 @@ for (let i = 0; i < pcollect.length; i += 1) {
   pcollect[i].addEventListener('click', f1());
 }
 
-// lesson-5
+/* // lesson-5
 const date = {
   year: 'numeric',
   month: 'numeric',
@@ -161,8 +162,8 @@ const data = [
 ];
 data.forEach((element) => {
   newData.push(element.country, element.city, element.hotel);
-});
-console.log(newData);
+}); */
+/* console.log(newData);
 console.log(newData.filter((el) => el === 'Berlin'));
 console.log(newData.filter((el) => el === 'Germany'));
 const mass = [{ country: 'Russia' },
@@ -486,7 +487,7 @@ function objectsAreEqual(a, b) {
 console.log(objectsAreEqual(obj3, obj12));
 console.log(objectsAreEqual(obj12, obj22)); */
 // lesson-8
-const dateCurrentYear = new Date().getFullYear();
+/* const dateCurrentYear = new Date().getFullYear();
 const studentsData = [
   {
     firstName: 'Василий',
@@ -570,7 +571,7 @@ console.log(exercise);
 console.log(exercise.fullName);
 console.log(courseExercise.course);
 console.log(students1.getInfo());
-// lesson-9
+*/ // lesson-9
 const colors = {
   data: ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'],
   [Symbol.iterator]() {
