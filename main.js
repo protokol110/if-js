@@ -100,56 +100,110 @@ const f1 = function () {
 for (let i = 0; i < pcollect.length; i += 1) {
   pcollect[i].addEventListener('click', f1());
 }
+*/
 
+// lesson-5
+const date = {
+  year: 'numeric',
+  month: 'numeric',
+  day: 'numeric',
+  timeZone: 'UTC',
+};
+console.log(new Date().toLocaleString('ru', date));
+// 6
+const newData = [];
+const data = [
+  {
+    country: 'Russia',
+    city: 'Saint Petersburg',
+    hotel: 'Hotel Leopold',
+  },
+  {
+    country: 'Spain',
+    city: 'Santa Cruz de Tenerife',
+    hotel: 'Apartment Sunshine',
+  },
+  {
+    country: 'Slowakia',
+    city: 'Vysokie Tatry',
+    hotel: 'Villa Kunerad',
+  },
+  {
+    country: 'Germany',
+    city: 'Berlin',
+    hotel: 'Hostel Friendship',
+  },
+  {
+    country: 'Indonesia',
+    city: 'Bali',
+    hotel: 'Ubud Bali Resort&SPA',
+  },
+  {
+    country: 'Netherlands',
+    city: 'Rotterdam',
+    hotel: 'King Kong Hostel',
+  },
+  {
+    country: 'Marocco',
+    city: 'Ourika',
+    hotel: 'Rokoko Hotel',
+  },
+  {
+    country: 'Germany',
+    city: 'Berlin',
+    hotel: 'Hotel Rehberge Berlin Mitte',
+  },
+];
+data.forEach((element) => {
+  newData.push(element.country, element.city, element.hotel);
 /*
 test('color', () => {
   expect(f1()).toBe(colors);
 });
 */
-// lesson-7
-const obj12 = {
-  a: 'a',
-  b: {
-    a: 'a',
-    b: 'b',
-    c: {
-      a: 1,
-    },
-  },
-};
-const obj22 = {
-  b: {
-    c: {
-      a: 1,
-    },
-    b: 'b',
-    a: 'a',
-  },
-  a: 'a',
-};
-const obj3 = {
-  a: {
-    c: {
-      a: 'a',
-    },
-    b: 'b',
-    a: 'a',
-  },
-  b: 'b',
-};
-function objectsAreEqual(a, b) {
-  for (const prop in a) {
-    if (a.hasOwnProperty(prop)) {
-      if (b.hasOwnProperty(prop)) {
-        if (typeof a[prop] === 'object') {
-          if (!objectsAreEqual(a[prop], b[prop])) return false;
-        } else if (a[prop] !== b[prop]) return false;
-      } else {
-        return false;
-      }
-    }
-  }
-  return true;
-}
-console.log(objectsAreEqual(obj3, obj12));
-console.log(objectsAreEqual(obj12, obj22));
+
+console.log(newData);
+console.log(newData.filter((el) => el === 'Berlin'));
+console.log(newData.filter((el) => el === 'Germany'));
+const mass = [{ country: 'Russia' },
+  { country: 'Ukraine' },
+  { country: 'Kazakhastan' },
+  { country: 'Spain' },
+  { country: 'Slowakia' },
+  { country: 'Indonesia' },
+  { country: 'Netherlands' },
+  { country: 'Marocco' },
+  { country: 'Germany' },
+];
+const sorting = JSON.stringify(mass);
+const output = sorting.replace(/country/g, '');
+const searchData1 = /\B\w{4}\B/g;
+console.log(output.match(searchData1));
+const mass2 = [
+  { city: 'Saint Petersburg' },
+  { city: 'Vysokie Tatry' },
+  { city: 'Santa Cruz de Tenerife' },
+  { city: 'Berlin' },
+  { city: 'Bali' },
+  { city: 'Rotterdam ' },
+  { city: 'Ourika' },
+  { city: 'Berlin' },
+];
+const sorting1 = JSON.stringify(mass2);
+const output1 = sorting1.replace(/country/g, '');
+const searchData2 = /\B\w{5}\B/g;
+console.log(output1.match(searchData2));
+const mass3 = [
+  { hotel: 'Hotel Leopold' },
+  { hotel: 'Apartment Sunshine' },
+  { hotel: 'Villa Kunerad' },
+  { hotel: 'Hostel Friendship' },
+  { hotel: 'Ubud Bali Resort&SPA' },
+  { hotel: 'King Kong Hostel' },
+  { hotel: 'Rokoko Hotel' },
+  { hotel: 'Hotel Rehberge Berlin Mitte' },
+];
+const sorting2 = JSON.stringify(mass3);
+const output2 = sorting2.replace(/country/g, '');
+const searchData3 = /\b\w{4}\B/g;
+console.log(output2.match(searchData3))}
