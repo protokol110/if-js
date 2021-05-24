@@ -184,11 +184,11 @@ const qwe = [
   { city: 'Ourika' },
   { city: 'Berlin' },
 ];
-const asd = JSON.stringify(qwe);
-const zxc = asd.replace(/country/g, '');
-const te = /\B\w{5}\B/g;
-console.log(zxc.match(te));
-const vbn = [
+const sorting1 = JSON.stringify(mass2);
+const output1 = sorting1.replace(/country/g, '');
+const searchData2 = /\B\w{5}\B/g;
+console.log(output1.match(searchData2));
+const mass3 = [
   { hotel: 'Hotel Leopold' },
   { hotel: 'Apartment Sunshine' },
   { hotel: 'Villa Kunerad' },
@@ -433,3 +433,7 @@ function city() {
   return object;
 }
 console.log(city(hotels));
+const sorting2 = JSON.stringify(mass3);
+const output2 = sorting2.replace(/country/g, '');
+const searchData3 = /\b\w{4}\B/g;
+console.log(output2.match(searchData3))}
