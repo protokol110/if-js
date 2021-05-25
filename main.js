@@ -207,7 +207,7 @@ const wsx = qaz.replace(/country/g, '');
 const de = /\b\w{4}\B/g;
 console.log(wsx.match(de));
 /* 6 lesson */
-function palindrome(s) {
+/* function palindrome(s) {
   return s === s.split('').reverse().join('');
 }
 console.log(palindrome('zxc'));
@@ -440,4 +440,51 @@ console.log(city(hotels));
 const sorting2 = JSON.stringify(mass3);
 const output2 = sorting2.replace(/country/g, '');
 const searchData3 = /\b\w{4}\B/g;
-console.log(output2.match(searchData3));
+console.log(output2.match(searchData3)); */
+// lesson - 7
+const obj12 = {
+  a: 'a',
+  b: {
+    a: 'a',
+    b: 'b',
+    c: {
+      a: 1,
+    },
+  },
+};
+const obj22 = {
+  b: {
+    c: {
+      a: 1,
+    },
+    b: 'b',
+    a: 'a',
+  },
+  a: 'a',
+};
+const obj3 = {
+  a: {
+    c: {
+      a: 'a',
+    },
+    b: 'b',
+    a: 'a',
+  },
+  b: 'b',
+};
+function objectsAreEqual(a, b) {
+  for (const prop in a) {
+    if (a.hasOwnProperty(prop)) {
+      if (b.hasOwnProperty(prop)) {
+        if (typeof a[prop] === 'object') {
+          if (!objectsAreEqual(a[prop], b[prop])) return false;
+        } else if (a[prop] !== b[prop]) return false;
+      } else {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+console.log(objectsAreEqual(obj3, obj12));
+console.log(objectsAreEqual(obj12, obj22));
