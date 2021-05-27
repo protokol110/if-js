@@ -89,7 +89,7 @@ console.log(sum(5)(2));
 }); *!/
 }); */
 // 6
-const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+/* const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
 const pcollect = document.getElementsByTagName('p');
 
 const f1 = function () {
@@ -103,7 +103,11 @@ const f1 = function () {
 
 for (let i = 0; i < pcollect.length; i += 1) {
   pcollect[i].addEventListener('click', f1());
-}
+} */
+/*
+test('color', () => {
+  expect(f1()).toBe(colors);
+});
 
 // lesson-5
 const date = {
@@ -112,7 +116,7 @@ const date = {
   day: 'numeric',
   timeZone: 'UTC',
 };
-console.log(new Date().toLocaleString('ru', date));
+console.log(new Date().toLocaleString('ru', date)); */
 /* // 6
 const newData = [];
 const data = [
@@ -159,12 +163,7 @@ const data = [
 ];
 data.forEach((element) => {
   newData.push(element.country, element.city, element.hotel);
-/*
-test('color', () => {
-  expect(f1()).toBe(colors);
 });
-*/
-/*
 console.log(newData);
 console.log(newData.filter((el) => el === 'Berlin'));
 console.log(newData.filter((el) => el === 'Germany'));
@@ -192,11 +191,11 @@ const qwe = [
   { city: 'Ourika' },
   { city: 'Berlin' },
 ];
-const asd = JSON.stringify(qwe);
-const zxc = asd.replace(/country/g, '');
-const te = /\B\w{5}\B/g;
-console.log(zxc.match(te));
-const vbn = [
+const sorting1 = JSON.stringify(mass2);
+const output1 = sorting1.replace(/country/g, '');
+const searchData2 = /\B\w{5}\B/g;
+console.log(output1.match(searchData2));
+const mass3 = [
   { hotel: 'Hotel Leopold' },
   { hotel: 'Apartment Sunshine' },
   { hotel: 'Villa Kunerad' },
@@ -210,8 +209,8 @@ const qaz = JSON.stringify(vbn);
 const wsx = qaz.replace(/country/g, '');
 const de = /\b\w{4}\B/g;
 console.log(wsx.match(de));
- 6 lesson
-function palindrome(s) {
+/* 6 lesson */
+/* function palindrome(s) {
   return s === s.split('').reverse().join('');
 }
 console.log(palindrome('zxc'));
@@ -258,11 +257,11 @@ const data = [
     hotel: 'Hotel Rehberge Berlin Mitte',
   },
 ];
-const search = (strz) => {
+const search = (str) => {
   const newData1 = [];
   data.forEach((lx, i) => {
     const obj = data[i];
-    if (obj.country.includes(strz) || obj.city.includes(strz) || obj.hotel.includes(strz)) {
+    if (obj.country.includes(str) || obj.city.includes(str) || obj.hotel.includes(str)) {
       newData1[newData1.length] = `${obj.country} ${obj.city} ${obj.hotel}`;
     }
   });
@@ -441,8 +440,12 @@ function city() {
   return object;
 }
 console.log(city(hotels));
+const sorting2 = JSON.stringify(mass3);
+const output2 = sorting2.replace(/country/g, '');
+const searchData3 = /\b\w{4}\B/g;
+console.log(output2.match(searchData3)); */
 // lesson - 7
-const obj12 = {
+/* const obj12 = {
   a: 'a',
   b: {
     a: 'a',
@@ -485,8 +488,8 @@ function objectsAreEqual(a, b) {
     }
   }
   return true;
-}
-console.log(objectsAreEqual(obj3, obj12));
+} */
+/* console.log(objectsAreEqual(obj3, obj12));
 console.log(objectsAreEqual(obj12, obj22)); */
 // lesson-8
 const dateCurrentYear = new Date().getFullYear();
