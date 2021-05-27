@@ -82,10 +82,14 @@ function sum(a) {
 }
 console.log(sum(5)(2));
 /!* test('qwerty', () => {
+console.log(sum(5)(2));
+
+/* test('qwerty', () => {
   expect(sum(5)(2)).toBe(7);
-});
+}); *!/
+}); */
 // 6
-const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+/* const colors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
 const pcollect = document.getElementsByTagName('p');
 
 const f1 = function () {
@@ -99,7 +103,11 @@ const f1 = function () {
 
 for (let i = 0; i < pcollect.length; i += 1) {
   pcollect[i].addEventListener('click', f1());
-}
+} */
+/*
+test('color', () => {
+  expect(f1()).toBe(colors);
+});
 
 // lesson-5
 const date = {
@@ -108,8 +116,8 @@ const date = {
   day: 'numeric',
   timeZone: 'UTC',
 };
-console.log(new Date().toLocaleString('ru', date));
-// 6
+console.log(new Date().toLocaleString('ru', date)); */
+/* // 6
 const newData = [];
 const data = [
   {
@@ -155,13 +163,8 @@ const data = [
 ];
 data.forEach((element) => {
   newData.push(element.country, element.city, element.hotel);
-/*
-test('color', () => {
-  expect(f1()).toBe(colors);
 });
-*/
-
-/* console.log(newData);
+console.log(newData);
 console.log(newData.filter((el) => el === 'Berlin'));
 console.log(newData.filter((el) => el === 'Germany'));
 const mass = [{ country: 'Russia' },
@@ -442,7 +445,7 @@ const output2 = sorting2.replace(/country/g, '');
 const searchData3 = /\b\w{4}\B/g;
 console.log(output2.match(searchData3)); */
 // lesson - 7
-const obj12 = {
+/* const obj12 = {
   a: 'a',
   b: {
     a: 'a',
@@ -485,6 +488,91 @@ function objectsAreEqual(a, b) {
     }
   }
   return true;
+} */
+/* console.log(objectsAreEqual(obj3, obj12));
+console.log(objectsAreEqual(obj12, obj22)); */
+// lesson-8
+const dateCurrentYear = new Date().getFullYear();
+const studentsData = [
+  {
+    firstName: 'Василий',
+    lastName: 'Петров',
+    admissionYear: 2019,
+    courseName: 'Java',
+  },
+  {
+    firstName: 'Иван',
+    lastName: 'Иванов',
+    admissionYear: 2018,
+    courseName: 'JavaScript',
+  },
+  {
+    firstName: 'Александр',
+    lastName: 'Федоров',
+    admissionYear: 2017,
+    courseName: 'Python',
+  },
+  {
+    firstName: 'Николай',
+    lastName: 'Петров',
+    admissionYear: 2019,
+    courseName: 'Android',
+  },
+];
+class User {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
 }
-console.log(objectsAreEqual(obj3, obj12));
-console.log(objectsAreEqual(obj12, obj22));
+class Student extends User {
+  constructor(admissionYear, courseName, firstName, lastname) {
+    super(firstName, lastname);
+    this.admissionYear = admissionYear;
+    this.courseName = courseName;
+  }
+
+  get course() {
+    return dateCurrentYear - this.admissionYear;
+  }
+}
+class Student1 {
+  constructor(firstName, lastName, admissionYear, courseName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.admissionYear = admissionYear;
+    this.courseName = courseName;
+  }
+
+  get fullName1() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  get course() {
+    return dateCurrentYear - this.admissionYear;
+  }
+}
+const data2 = studentsData.map((e) => new Student1(...Object.values(e)));
+class Students {
+  constructor(students) {
+    this.students = students;
+  }
+
+  getInfo() {
+    const sorted = this.students.sort((a, b) => a.course - b.course);
+    return sorted.map((a) => `${a.fullName1} - ${a.courseName}, ${a.course} курс`);
+  }
+}
+// eslint-disable-next-line no-unused-vars
+const students1 = new Students(data2);
+const exercise = new User('Aleksey', ' Siniakevich');
+const courseExercise = new Student(2020, 'Java');
+console.log(exercise);
+console.log(exercise.fullName);
+console.log(courseExercise.course);
+console.log(students1.getInfo());
