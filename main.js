@@ -585,3 +585,24 @@ console.log(exercise);
 console.log(exercise.fullName);
 console.log(courseExercise.course);
 console.log(students1.getInfo()); */
+// lesson-9
+const colors = {
+  data: ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'],
+  [Symbol.iterator]() {
+    return {
+      current: 0,
+      data: this.data,
+      next() {
+        this.current += 1;
+        return {
+          done: this.current === this.data.length,
+          value: { color: this.data[this.current], index: this.current },
+        };
+      },
+    };
+  },
+};
+for (const color of colors) {
+  const textEl = document.getElementById(`text${color.index}`);
+  textEl.style.color = color.color;
+}
