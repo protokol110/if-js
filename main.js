@@ -641,86 +641,18 @@ const data = [
     imageUrl: 'https://res.cloudinary.com/intellectfox/image/upload/v1610379365/fe/the-andaman-resort_d2xksj.jpg',
   },
 ];
-const divElementMain = document.createElement('div');
-const divElement = document.createElement('div');
-const divImage = document.createElement('div');
-const divImageSpain = document.createElement('div');
-const divImageSlowakia = document.createElement('div');
-const divImageGermany = document.createElement('div');
-const divImageRussian = document.createElement('div');
-const newCapitalText = document.createTextNode('Homes guests love');
-const newTextImgSpain = document.createTextNode('Apartment Sunshine');
-const newTextImgSlowakia = document.createTextNode('Villa Kunerad');
-const newTextImgGermany = document.createTextNode('Hostel Friendship');
-const newTextImgRussian = document.createTextNode('Hotel Leopold');
-const newTextImgRussianGrey = document.createTextNode('Saint Petersburg, Russia');
-const newTextImSlowakiaGrey = document.createTextNode('Vysokie Tatry, Slowakia');
-const newTextImSpainGrey = document.createTextNode('Santa  Cruz de Tenerife, Spain');
-const newTextImGermanyGrey = document.createTextNode('Berlin, Germany');
-const spanElement = document.createElement('span');
-const spanElementImgSpain = document.createElement('span');
-const spanElementImgSlowakia = document.createElement('span');
-const spanElementImgGermany = document.createElement('span');
-const spanElementImgRussian = document.createElement('span');
-const pElementImgGermanyGrey = document.createElement('p');
-const pElementImgSpainGrey = document.createElement('p');
-const pElementImgSlowakiaGrey = document.createElement('p');
-const pElementImgRussianGrey = document.createElement('p');
-const imgImageSpain = document.createElement('img');
-const imgImageSlowakia = document.createElement('img');
-const imgImageGermany = document.createElement('img');
-const imgImageRussian = document.createElement('img');
-const brElement = document.createElement('br');
-document.body.appendChild(divElementMain);
-spanElement.appendChild(newCapitalText);
-spanElement.classList.add('block-homes__name-content');
-divElement.appendChild(spanElement);
-divElement.classList.add('block-homes__name');
-divElementMain.appendChild(divElement);
-divElementMain.appendChild(divImage);
-divElementMain.classList.add('block-homes');
-divImage.appendChild(divImageRussian);
-divImage.classList.add('block-homes__container-image');
-divImage.appendChild(divImageSpain);
-divImage.appendChild(divImageSlowakia);
-divImage.appendChild(divImageGermany);
-divImageRussian.appendChild(imgImageRussian);
-divImageRussian.appendChild(spanElementImgRussian);
-divImageRussian.classList.add('block-homes__container-image-first');
-divImageSpain.appendChild(imgImageSpain);
-divImageSpain.appendChild(spanElementImgSpain);
-divImageSpain.classList.add('block-homes__container-image-first');
-divImageSlowakia.appendChild(imgImageSlowakia);
-divImageSlowakia.appendChild(spanElementImgSlowakia);
-divImageSlowakia.classList.add('block-homes__container-image-first');
-divImageGermany.appendChild(imgImageGermany);
-divImageGermany.appendChild(spanElementImgGermany);
-divImageGermany.classList.add('block-homes__container-image-first');
-spanElementImgSpain.appendChild(newTextImgSpain);
-spanElementImgSpain.appendChild(pElementImgSpainGrey);
-spanElementImgSpain.classList.add('block-homes__container-text');
-spanElementImgSlowakia.appendChild(newTextImgSlowakia);
-spanElementImgSlowakia.appendChild(pElementImgSlowakiaGrey);
-spanElementImgSlowakia.classList.add('block-homes__container-text');
-spanElementImgGermany.appendChild(newTextImgGermany);
-spanElementImgGermany.appendChild(pElementImgGermanyGrey);
-spanElementImgGermany.classList.add('block-homes__container-text');
-spanElementImgRussian.appendChild(newTextImgRussian);
-spanElementImgRussian.appendChild(pElementImgRussianGrey);
-spanElementImgRussian.classList.add('block-homes__container-text');
-pElementImgRussianGrey.appendChild(newTextImgRussianGrey);
-pElementImgRussianGrey.classList.add('block-homes__container-text-grey');
-pElementImgSlowakiaGrey.appendChild(newTextImSlowakiaGrey);
-pElementImgSlowakiaGrey.classList.add('block-homes__container-text-grey');
-pElementImgSpainGrey.appendChild(newTextImSpainGrey);
-pElementImgSpainGrey.classList.add('block-homes__container-text-grey');
-pElementImgGermanyGrey.appendChild(newTextImGermanyGrey);
-pElementImgGermanyGrey.classList.add('block-homes__container-text-grey');
-imgImageRussian.setAttribute('src', 'https://res.cloudinary.com/intellectfox/image/upload/v1610379365/fe/hotel-leopold_mflelk.jpg');
-imgImageSpain.setAttribute('src', 'https://res.cloudinary.com/intellectfox/image/upload/v1610379364/fe/apartment-sunshine_vhdlel.jpg');
-imgImageSlowakia.setAttribute('src', 'https://res.cloudinary.com/intellectfox/image/upload/v1610379365/fe/villa-kunerad_gdbqgv.jpg');
-imgImageGermany.setAttribute('src', 'https://res.cloudinary.com/intellectfox/image/upload/v1610379364/fe/hostel-friendship_aw6tn7.jpg');
-imgImageRussian.setAttribute('alt', 'Hotel Leopold');
-imgImageSpain.setAttribute('alt', 'Apartment Sunshine');
-imgImageSlowakia.setAttribute('alt', 'Villa Kunerad');
-imgImageGermany.setAttribute('alt', 'Hostel Friendship');
+const divContainer = document.querySelector('.block-homes__container-image');
+
+data.forEach((elem) => {
+  divContainer.innerHTML += `
+  <div class="block-homes__container-image-first block-1-hotels">
+    <div class="test">
+            <img src=${elem.imageUrl}
+                 alt=${elem.name}
+                 class="image-1-hotels"/>
+                  </div>
+            <p class="block-homes__container-text">${elem.name}</p>
+            <p class="block-homes__container-text-grey">${elem.city}, ${elem.country}</p>
+  </div>
+  `;
+});
