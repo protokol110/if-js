@@ -76,9 +76,15 @@ randArr(10, 1, 100);
 console.log(randArr(10, 1, 100).map(replaceZero).join(', '));
 // new homework lesson-4
 function sum(a) {
-  return function (b) {
-    return a + b;
+  let isSum = a;
+  function res(b) {
+    isSum += b;
+    return res;
+  }
+  res.toString = function () {
+    return isSum;
   };
+  return res;
 }
 console.log(sum(5)(2));
 /!* test('qwerty', () => {
@@ -110,6 +116,9 @@ test('color', () => {
 });
 
 // lesson-5
+}
+
+/* // lesson-5
 const date = {
   year: 'numeric',
   month: 'numeric',
@@ -163,8 +172,8 @@ const data = [
 ];
 data.forEach((element) => {
   newData.push(element.country, element.city, element.hotel);
-});
-console.log(newData);
+}); */
+/* console.log(newData);
 console.log(newData.filter((el) => el === 'Berlin'));
 console.log(newData.filter((el) => el === 'Germany'));
 const mass = [{ country: 'Russia' },
@@ -492,7 +501,7 @@ function objectsAreEqual(a, b) {
 /* console.log(objectsAreEqual(obj3, obj12));
 console.log(objectsAreEqual(obj12, obj22)); */
 // lesson-8
-const dateCurrentYear = new Date().getFullYear();
+/* const dateCurrentYear = new Date().getFullYear();
 const studentsData = [
   {
     firstName: 'Василий',
@@ -575,4 +584,25 @@ const courseExercise = new Student(2020, 'Java');
 console.log(exercise);
 console.log(exercise.fullName);
 console.log(courseExercise.course);
-console.log(students1.getInfo());
+console.log(students1.getInfo()); */
+// lesson-9
+const colors = {
+  data: ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'],
+  [Symbol.iterator]() {
+    return {
+      current: 0,
+      data: this.data,
+      next() {
+        this.current += 1;
+        return {
+          done: this.current === this.data.length,
+          value: { color: this.data[this.current], index: this.current },
+        };
+      },
+    };
+  },
+};
+for (const color of colors) {
+  const textEl = document.getElementById(`text${color.index}`);
+  textEl.style.color = color.color;
+}
