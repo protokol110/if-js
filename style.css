@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+}
+.block-homes{
+    background-color: #EAF0F9;
+    height: 800px;
+    width: 99.5%;
+}
+.block-homes__name{
+    display: flex;
+    justify-content: center;
+}
+.block-homes__name-content{
+    font-size: 40px;
+    font-family: sans-serif;
+}
+.block-homes__container-image{
+    margin-left: 8.33%;
+    margin-right: 8.33%;
+    margin-top: 105px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.block-homes__container-text{
+    font-size: 24px;
+    line-height: 28px;
+    color: #3077C6;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.block-homes__container-text-grey{
+    font-size: 24px;
+    line-height: 28px;
+    color: #BFBFBF;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.icon-arrows{
+    position: absolute;
+    right: -0.5%;
+    top: 35%;
+    cursor: pointer;
+}
+
+.block-homes__container-image-first{
+    margin-left: 16px;
+}
