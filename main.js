@@ -591,7 +591,7 @@ for (const color of colors) {
   textEl.style.color = color.color;
 } */
 // lesson-10
-const data = [
+/* const data = [
   {
     name: 'Hotel Leopold',
     city: 'Saint Petersburg',
@@ -655,4 +655,113 @@ data.forEach((elem) => {
             <p class="block-homes__container-text-grey">${elem.city}, ${elem.country}</p>
   </div>
   `;
-});
+}); */
+// lesson-11
+const buttonRoomPlus = document.getElementById('button-rooms-plus');
+const buttonChildrensPlus = document.getElementById('button-children-plus');
+const buttonAdultsPlus = document.getElementById('button-adults-plus');
+const buttonRoomMinus = document.getElementById('button-rooms-minus');
+const buttonChildrensMinus = document.getElementById('button-children-minus');
+const buttonAdultsMinus = document.getElementById('button-adults-minus');
+const countRoom = document.getElementById('button-Count-Rooms');
+const countChildren = document.getElementById('button-Count-Children');
+const countAdult = document.getElementById('button-Count-Adult');
+const age = document.getElementById('age-div');
+const ageFirst = document.getElementById('age-first');
+const ageTwo = document.getElementById('age-two');
+const ageThree = document.getElementById('age-three');
+const ageFour = document.getElementById('age-four');
+const ageFive = document.getElementById('age-five');
+const ageSix = document.getElementById('age-six');
+const ageSeven = document.getElementById('age-seven');
+const ageEight = document.getElementById('age-eight');
+const ageNine = document.getElementById('age-nine');
+const ageTen = document.getElementById('age-ten');
+let numberRoom = 1;
+let numberChildren = 0;
+let numberAdult = 1;
+
+buttonAdultsPlus.onclick = function f() {
+  if (numberAdult <= 29) {
+    numberAdult++;
+    countAdult.innerHTML = numberAdult;
+  }
+};
+
+buttonAdultsMinus.onclick = function () {
+  if (numberAdult >= 2) {
+    numberAdult--;
+    countAdult.innerHTML = numberAdult;
+  }
+};
+
+buttonChildrensPlus.onclick = function () {
+  if (numberChildren <= 9) {
+    numberChildren++;
+    countChildren.innerHTML = numberChildren;
+    if (numberChildren !== 0) {
+      age.classList.remove('choice-age__disabled');
+    }
+    if (numberChildren === 1) {
+      ageFirst.classList.remove('choice-age__disabled');
+    }
+    if (numberChildren === 2) {
+      ageTwo.classList.remove('choice-age__disabled');
+    }
+    if (numberChildren === 3) {
+      ageThree.classList.remove('choice-age__disabled');
+    }
+    if (numberChildren === 4) {
+      ageFour.classList.remove('choice-age__disabled');
+    }
+    if (numberChildren === 5) {
+      ageFive.classList.remove('choice-age__disabled');
+    }
+    if (numberChildren === 6) {
+      ageSix.classList.remove('choice-age__disabled');
+    }
+    if (numberChildren === 7) {
+      ageSeven.classList.remove('choice-age__disabled');
+    }
+    if (numberChildren === 8) {
+      ageEight.classList.remove('choice-age__disabled');
+    }
+    if (numberChildren === 9) {
+      ageNine.classList.remove('choice-age__disabled');
+    }
+    if (numberChildren === 10) {
+      ageTen.classList.remove('choice-age__disabled');
+    }
+  }
+};
+
+buttonChildrensMinus.onclick = function () {
+  if (numberChildren >= 1) {
+    numberChildren--;
+    countChildren.innerHTML = numberChildren;
+    if (numberChildren === 0) {
+      age.classList.add('choice-age__disabled');
+    }
+  }
+};
+function removeSelection() {
+  const selects = document.querySelectorAll('.choice-age__select');
+  const selectsCount = selects.length;
+  const lastSelect = selects[selectsCount - 1];
+  lastSelect.remove();
+}
+buttonChildrensMinus.addEventListener('click', removeSelection);
+
+buttonRoomPlus.onclick = function () {
+  if (numberRoom <= 29) {
+    numberRoom++;
+    countRoom.innerHTML = numberRoom;
+  }
+};
+
+buttonRoomMinus.onclick = function () {
+  if (numberRoom >= 2) {
+    numberRoom--;
+    countRoom.innerHTML = numberRoom;
+  }
+};

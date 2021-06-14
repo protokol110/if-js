@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<svg style="position: absolute" visibility="hidden" width="0" height="0">
+<!--<svg style="position: absolute" visibility="hidden" width="0" height="0">
 <symbol viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" id="icon-arrow">
     <g filter="url(#filter0_d)">
         <circle cx="24" cy="20" r="20" fill="#F3F3F4"/>
@@ -35,6 +35,257 @@
         </svg>
     </div>
 
+</div>-->
+<div class="choice-form">
+    <div class="choice-form__under">
+        <div class="choice-form__adults choice-form__markup">
+            <div >
+                <label><span class="choice-form__adults-text">Adults</span></label>
+            </div>
+            <div class="choice-form__adults-content">
+                <button type="button" class="button-minus" id="button-adults-minus">
+                    <span class="choice-form__adults-content-button">-</span>
+                </button>
+                <span class="choice-form__adults-content-span choice-form__adults-text" id="button-Count-Adult">1</span>
+                <button type="button" class="button-plus" id="button-adults-plus">
+                    <span class="choice-form__adults-content-button">+</span>
+                </button>
+            </div>
+        </div>
+        <div class="choice-form__children choice-form__markup">
+            <div >
+                <label><span class="choice-form__adults-text">Children</span></label>
+            </div>
+            <div class="choice-form__adults-content">
+                <button class="button-minus" type="button" id="button-children-minus">
+                    <span class="choice-form__adults-content-button">-</span>
+                </button>
+                <span class="choice-form__adults-content-span choice-form__adults-text"id="button-Count-Children" >0</span>
+                <button type="button" class="button-plus" id="button-children-plus">
+                    <span class="choice-form__adults-content-button">+</span>
+                </button>
+            </div>
+        </div>
+        <div class="choice-form__rooms choice-form__markup">
+            <div >
+                <label>
+                    <span class="choice-form__adults-text">Rooms</span>
+                </label>
+            </div>
+            <div class="choice-form__adults-content">
+                <button class="button-minus" id="button-rooms-minus">
+                    <span class="choice-form__adults-content-button">-</span>
+                </button>
+                <span class="choice-form__adults-content-span choice-form__adults-text" id="button-Count-Rooms">1</span>
+                <button type="button" class="button-plus"  id="button-rooms-plus">
+                    <span class="choice-form__adults-content-button" id="span-rooms-plus">+</span>
+                </button>
+            </div>
+        </div>
+        <div  class="choice-age choice-age__disabled" id="age-div">
+            <label for="age-first"><span> What is the age of the child you’re <br>travelling with?</span></label><br>
+            <select id="age-first"  class="choice-age__select">
+                <option>0 years old</option>
+                <option>1 years old</option>
+                <option>2 years old</option>
+                <option>3 years old</option>
+                <option>4 years old</option>
+                <option>5 years old</option>
+                <option>6 years old</option>
+                <option>7 years old</option>
+                <option>8 years old</option>
+                <option>9 years old</option>
+                <option>10 years old</option>
+                <option>11 years old</option>
+                <option>12 years old</option>
+                <option>13 years old</option>
+                <option>14 years old</option>
+                <option>15 years old</option>
+                <option>16 years old</option>
+                <option>17 years old</option>
+            </select>
+            <select id="age-two"  class="choice-age__select choice-age__disabled">
+                <option>0 years old</option>
+                <option>1 years old</option>
+                <option>2 years old</option>
+                <option>3 years old</option>
+                <option>4 years old</option>
+                <option>5 years old</option>
+                <option>6 years old</option>
+                <option>7 years old</option>
+                <option>8 years old</option>
+                <option>9 years old</option>
+                <option>10 years old</option>
+                <option>11 years old</option>
+                <option>12 years old</option>
+                <option>13 years old</option>
+                <option>14 years old</option>
+                <option>15 years old</option>
+                <option>16 years old</option>
+                <option>17 years old</option>
+            </select>
+            <select id="age-three"  class="choice-age__select choice-age__disabled">
+                <option>0 years old</option>
+                <option>1 years old</option>
+                <option>2 years old</option>
+                <option>3 years old</option>
+                <option>4 years old</option>
+                <option>5 years old</option>
+                <option>6 years old</option>
+                <option>7 years old</option>
+                <option>8 years old</option>
+                <option>9 years old</option>
+                <option>10 years old</option>
+                <option>11 years old</option>
+                <option>12 years old</option>
+                <option>13 years old</option>
+                <option>14 years old</option>
+                <option>15 years old</option>
+                <option>16 years old</option>
+                <option>17 years old</option>
+            </select>
+            <select id="age-four"  class="choice-age__select choice-age__disabled">
+                <option>0 years old</option>
+                <option>1 years old</option>
+                <option>2 years old</option>
+                <option>3 years old</option>
+                <option>4 years old</option>
+                <option>5 years old</option>
+                <option>6 years old</option>
+                <option>7 years old</option>
+                <option>8 years old</option>
+                <option>9 years old</option>
+                <option>10 years old</option>
+                <option>11 years old</option>
+                <option>12 years old</option>
+                <option>13 years old</option>
+                <option>14 years old</option>
+                <option>15 years old</option>
+                <option>16 years old</option>
+                <option>17 years old</option>
+            </select>
+            <select id="age-five"  class="choice-age__select choice-age__disabled">
+                <option>0 years old</option>
+                <option>1 years old</option>
+                <option>2 years old</option>
+                <option>3 years old</option>
+                <option>4 years old</option>
+                <option>5 years old</option>
+                <option>6 years old</option>
+                <option>7 years old</option>
+                <option>8 years old</option>
+                <option>9 years old</option>
+                <option>10 years old</option>
+                <option>11 years old</option>
+                <option>12 years old</option>
+                <option>13 years old</option>
+                <option>14 years old</option>
+                <option>15 years old</option>
+                <option>16 years old</option>
+                <option>17 years old</option>
+            </select>
+            <select id="age-six"  class="choice-age__select choice-age__disabled">
+                <option>0 years old</option>
+                <option>1 years old</option>
+                <option>2 years old</option>
+                <option>3 years old</option>
+                <option>4 years old</option>
+                <option>5 years old</option>
+                <option>6 years old</option>
+                <option>7 years old</option>
+                <option>8 years old</option>
+                <option>9 years old</option>
+                <option>10 years old</option>
+                <option>11 years old</option>
+                <option>12 years old</option>
+                <option>13 years old</option>
+                <option>14 years old</option>
+                <option>15 years old</option>
+                <option>16 years old</option>
+                <option>17 years old</option>
+            </select>
+            <select id="age-seven"  class="choice-age__select choice-age__disabled">
+                <option>0 years old</option>
+                <option>1 years old</option>
+                <option>2 years old</option>
+                <option>3 years old</option>
+                <option>4 years old</option>
+                <option>5 years old</option>
+                <option>6 years old</option>
+                <option>7 years old</option>
+                <option>8 years old</option>
+                <option>9 years old</option>
+                <option>10 years old</option>
+                <option>11 years old</option>
+                <option>12 years old</option>
+                <option>13 years old</option>
+                <option>14 years old</option>
+                <option>15 years old</option>
+                <option>16 years old</option>
+                <option>17 years old</option>
+            </select>
+            <select id="age-eight"  class="choice-age__select choice-age__disabled">
+                <option>0 years old</option>
+                <option>1 years old</option>
+                <option>2 years old</option>
+                <option>3 years old</option>
+                <option>4 years old</option>
+                <option>5 years old</option>
+                <option>6 years old</option>
+                <option>7 years old</option>
+                <option>8 years old</option>
+                <option>9 years old</option>
+                <option>10 years old</option>
+                <option>11 years old</option>
+                <option>12 years old</option>
+                <option>13 years old</option>
+                <option>14 years old</option>
+                <option>15 years old</option>
+                <option>16 years old</option>
+                <option>17 years old</option>
+            </select>
+            <select id="age-nine"  class="choice-age__select choice-age__disabled">
+                <option>0 years old</option>
+                <option>1 years old</option>
+                <option>2 years old</option>
+                <option>3 years old</option>
+                <option>4 years old</option>
+                <option>5 years old</option>
+                <option>6 years old</option>
+                <option>7 years old</option>
+                <option>8 years old</option>
+                <option>9 years old</option>
+                <option>10 years old</option>
+                <option>11 years old</option>
+                <option>12 years old</option>
+                <option>13 years old</option>
+                <option>14 years old</option>
+                <option>15 years old</option>
+                <option>16 years old</option>
+                <option>17 years old</option>
+            </select>
+            <select id="age-ten"  class="choice-age__select choice-age__disabled">
+                <option>0 years old</option>
+                <option>1 years old</option>
+                <option>2 years old</option>
+                <option>3 years old</option>
+                <option>4 years old</option>
+                <option>5 years old</option>
+                <option>6 years old</option>
+                <option>7 years old</option>
+                <option>8 years old</option>
+                <option>9 years old</option>
+                <option>10 years old</option>
+                <option>11 years old</option>
+                <option>12 years old</option>
+                <option>13 years old</option>
+                <option>14 years old</option>
+                <option>15 years old</option>
+                <option>16 years old</option>
+                <option>17 years old</option>
+            </select>
+        </div>
+    </div>
 </div>
 <script src="main.js"></script>
 </body>

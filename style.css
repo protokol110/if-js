@@ -1,4 +1,4 @@
-body{
+/* body{
     margin: 0;
 }
 .block-homes{
@@ -50,3 +50,76 @@ body{
 .block-homes__container-image-first{
     margin-left: 16px;
 }
+*/
+
+.choice-form{
+    background-color: darkseagreen;
+    width: 259px;
+    min-height: 158px;
+    border-radius: 8px;
+    padding: 22px;
+}
+.choice-form__adults-text{
+    font-size: 16px;
+    line-height: 19px;
+    font-family:sans-serif;
+}
+.choice-form__markup{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.choice-form__children, .choice-form__rooms{
+    margin-top: 15px;
+}
+.choice-form__adults-content{
+    display: flex;
+    align-items: center;
+}
+.choice-form__adults-content-span{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.choice-form__adults-content-button{
+    font-size: 18px;
+    line-height: 21px;
+    color: #3077C6;
+    font-family: sans-serif;
+}
+.button-minus,.button-plus{
+    width: 30px;
+    cursor: pointer;
+    margin-right: 0;
+    height: 30px;
+    background: #FFFFFF;
+    border: 1px solid #3077C6;
+    box-sizing: border-box;
+}
+.button-disabled{
+    background: #FFFFFF;
+    border: 1px solid #CECECE;
+    box-sizing: border-box;
+    cursor: not-allowed;
+}
+.choice-age{
+    margin-top: 30px;
+    font-size: 12px;
+    line-height: 14px;"
+}
+.choice-age__select{
+    background: #FFFFFF;
+    border: 1px solid #3077C6;
+    box-sizing: border-box;
+    height: 30px;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.choice-age__disabled{
+    display: none;
+}
+.choice-age__select{
+    font-size: 12px;
+    line-height: 14px;
+}
+
