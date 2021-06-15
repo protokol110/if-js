@@ -1,10 +1,9 @@
-/* body{
+ body{
     margin: 0;
 }
 .block-homes{
     background-color: #EAF0F9;
     height: 800px;
-    width: 99.5%;
 }
 .block-homes__name{
     display: flex;
@@ -39,10 +38,14 @@
     font-family: sans-serif;
     margin: 0;
 }
+.image-1-hotels{
+    width: 300px;
+    height: 300px;
+}
 
 .icon-arrows{
     position: absolute;
-    right: -0.5%;
+    right: -1%;
     top: 35%;
     cursor: pointer;
 }
@@ -50,8 +53,8 @@
 .block-homes__container-image-first{
     margin-left: 16px;
 }
-*/
 
+/*
 .choice-form{
     background-color: darkseagreen;
     width: 259px;
@@ -122,4 +125,5 @@
     font-size: 12px;
     line-height: 14px;
 }
+*/
 

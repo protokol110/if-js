@@ -657,7 +657,7 @@ data.forEach((elem) => {
   `;
 }); */
 // lesson-11
-const buttonRoomPlus = document.getElementById('button-rooms-plus');
+/* const buttonRoomPlus = document.getElementById('button-rooms-plus');
 const buttonChildrensPlus = document.getElementById('button-children-plus');
 const buttonAdultsPlus = document.getElementById('button-adults-plus');
 const buttonRoomMinus = document.getElementById('button-rooms-minus');
@@ -764,4 +764,25 @@ buttonRoomMinus.onclick = function () {
     numberRoom--;
     countRoom.innerHTML = numberRoom;
   }
+}; */
+// lesson 12
+const divContainer = document.querySelector('.block-homes__container-image');
+const app = async () => {
+  const obj = await fetch('https://fe-student-api.herokuapp.com/api/hotels/popular');
+  const result = await obj.json();
+  result.forEach((elem) => {
+    divContainer.innerHTML += `
+  <div class="block-homes__container-image-first block-1-hotels">
+    <div class="test">
+            <img src=${elem.imageUrl}
+                 alt=${elem.name}
+                 class="image-1-hotels"/>
+                  </div>
+            <p class="block-homes__container-text">${elem.name}</p>
+            <p class="block-homes__container-text-grey">${elem.city}, ${elem.country}</p>
+  </div>
+  `;
+  });
 };
+
+app();
