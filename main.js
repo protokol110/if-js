@@ -766,6 +766,7 @@ buttonRoomMinus.onclick = function () {
   }
 }; */
 // lesson 12
+/*
 const divContainer = document.querySelector('.block-homes__container-image');
 const app = async () => {
   const obj = await fetch('https://fe-student-api.herokuapp.com/api/hotels/popular');
@@ -786,3 +787,44 @@ const app = async () => {
 };
 
 app();
+*/
+
+// lesson-13
+const divContainer = document.querySelector('.block-homes__container-image');
+if (sessionStorage.getItem('dataHome') !== null) {
+  const result = JSON.parse(sessionStorage.dataHome);
+  result.forEach((elem) => {
+    divContainer.innerHTML += `
+  <div class="block-homes__container-image-first block-1-hotels">
+    <div class="test">
+            <img src=${elem.imageUrl}
+                 alt=${elem.name}
+                 class="image-1-hotels"/>
+                  </div>
+            <p class="block-homes__container-text">${elem.name}</p>
+            <p class="block-homes__container-text-grey">${elem.city}, ${elem.country}</p>
+  </div>
+  `;
+  });
+} else {
+  const app = async () => {
+    const obj = await fetch('https://fe-student-api.herokuapp.com/api/hotels/popular');
+    const result = await obj.json();
+    result.forEach((elem) => {
+      divContainer.innerHTML += `
+  <div class="block-homes__container-image-first block-1-hotels">
+    <div class="test">
+            <img src=${elem.imageUrl}
+                 alt=${elem.name}
+                 class="image-1-hotels"/>
+                  </div>
+            <p class="block-homes__container-text">${elem.name}</p>
+            <p class="block-homes__container-text-grey">${elem.city}, ${elem.country}</p>
+  </div>
+  `;
+    });
+    const toSesStorage = JSON.stringify(result);
+    sessionStorage.setItem('dataHome', toSesStorage);
+  };
+  app();
+}
