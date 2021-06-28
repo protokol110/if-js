@@ -790,6 +790,7 @@ app();
 */
 
 // lesson-13
+/*
 const divContainer = document.querySelector('.block-homes__container-image');
 if (sessionStorage.getItem('dataHome') !== null) {
   const result = JSON.parse(sessionStorage.dataHome);
@@ -828,3 +829,21 @@ if (sessionStorage.getItem('dataHome') !== null) {
   };
   app();
 }
+*/
+// lesson 14
+const formEl = document.querySelector('#form-El');
+
+formEl.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(formEl);
+
+  const answer = await fetch('https://fe-student-api.herokuapp.com/api/file', {
+    method: 'POST',
+    body: formData,
+  });
+
+  const answerChange = await answer.json();
+
+  console.log(answerChange);
+});
