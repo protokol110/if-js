@@ -591,7 +591,7 @@ for (const color of colors) {
   textEl.style.color = color.color;
 } */
 // lesson-10
- const data = [
+/* const data = [
   {
     name: 'Hotel Leopold',
     city: 'Saint Petersburg',
@@ -825,7 +825,7 @@ if (sessionStorage.getItem('dataHome') !== null) {
     sessionStorage.setItem('dataHome', toSesStorage);
   };
   app();
-}
+} */
 // lesson 14
 const formEl = document.querySelector('#form-El');
 
@@ -843,4 +843,3 @@ formEl.addEventListener('submit', async (event) => {
 
   console.log(answerChange);
 });
-
