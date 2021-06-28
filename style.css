@@ -1,4 +1,4 @@
-/*
+
  body{
     margin: 0;
 }
@@ -55,7 +55,6 @@
     margin-left: 16px;
 }
 
-!*
 .choice-form{
     background-color: darkseagreen;
     width: 259px;
@@ -126,7 +125,6 @@
     font-size: 12px;
     line-height: 14px;
 }
-*/
 #form-El{
     display: flex;
     flex-direction: column;
