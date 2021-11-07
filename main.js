@@ -661,9 +661,9 @@ data.forEach((elem) => {
             <p class="block-homes__container-text-grey">${elem.city}, ${elem.country}</p>
   </div>
   `;
-}); */
+});
 // lesson-11
-/* const buttonRoomPlus = document.getElementById('button-rooms-plus');
+ const buttonRoomPlus = document.getElementById('button-rooms-plus');
 const buttonChildrensPlus = document.getElementById('button-children-plus');
 const buttonAdultsPlus = document.getElementById('button-adults-plus');
 const buttonRoomMinus = document.getElementById('button-rooms-minus');
@@ -770,9 +770,8 @@ buttonRoomMinus.onclick = function () {
     numberRoom--;
     countRoom.innerHTML = numberRoom;
   }
-}; */
+};
 // lesson 12
-/*
 const divContainer = document.querySelector('.block-homes__container-image');
 const app = async () => {
   const obj = await fetch('https://fe-student-api.herokuapp.com/api/hotels/popular');
@@ -793,7 +792,6 @@ const app = async () => {
 };
 
 app();
-*/
 
 // lesson-13
 const divContainer = document.querySelector('.block-homes__container-image');
@@ -833,4 +831,21 @@ if (sessionStorage.getItem('dataHome') !== null) {
     sessionStorage.setItem('dataHome', toSesStorage);
   };
   app();
-}
+} */
+// lesson 14
+const formEl = document.querySelector('#form-El');
+
+formEl.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(formEl);
+
+  const answer = await fetch('https://fe-student-api.herokuapp.com/api/file', {
+    method: 'POST',
+    body: formData,
+  });
+
+  const answerChange = await answer.json();
+
+  console.log(answerChange);
+});
